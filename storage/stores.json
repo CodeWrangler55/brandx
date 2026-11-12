@@ -1,0 +1,20 @@
+[
+  {
+    "store_id": "STORE-001",
+    "store_name": "Northside Wireless",
+    "contact_name": "Jordan Lee",
+    "location": "Portland, Oregon",
+    "previous_order_date": "2026-10-12",
+    "products_previously_purchased": ["BX-PH-001", "BX-PH-002"],
+    "last_contact_outcome": "Demo account; no real retailer contacted"
+  },
+  {
+    "store_id": "STORE-002",
+    "store_name": "Cedar Mobile",
+    "contact_name": "Taylor Morgan",
+    "location": "Madison, Wisconsin",
+    "previous_order_date": "2026-10-20",
+    "products_previously_purchased": ["BX-PH-001"],
+    "last_contact_outcome": "Demo account; no real retailer contacted"
+  }
+]

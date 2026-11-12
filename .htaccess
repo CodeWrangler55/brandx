@@ -1,0 +1,10 @@
+Options -Indexes
+RewriteEngine On
+
+# Protect project internals if the project root is accidentally set as the web root.
+RewriteRule ^(?:src|storage|tests|bland|\.git)(?:/|$) - [F,NC,L]
+RewriteRule ^(?:\.env(?:\..*)?|\.gitignore|README\.md|phpunit\.xml)$ - [F,NC,L]
+
+# Fallback when the host cannot point its document root at /public.
+RewriteRule ^(assets|api)(/.*)?$ public/$1$2 [L]
+RewriteRule ^auth\.php$ public/auth.php [L]

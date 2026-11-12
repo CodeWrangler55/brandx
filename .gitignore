@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+
+# Local runtime data and logs
+/storage/*.lock
+/storage/*.tmp
+/storage/*.json
+!/storage/products.json
+!/storage/stores.json
+*.log

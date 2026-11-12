@@ -1,0 +1,5 @@
+[
+  {"sku":"BX-PH-001","brand":"Apple","model":"iPhone 17","name":"Apple iPhone 17","storage_gb":256,"available":true},
+  {"sku":"BX-PH-002","brand":"Apple","model":"iPhone 17 Pro Max","name":"Apple iPhone 17 Pro Max","storage_gb":256,"available":true},
+  {"sku":"BX-PH-003","brand":"Apple","model":"iPhone 17 Pro","name":"Apple iPhone 17 Pro","storage_gb":256,"available":false}
+]

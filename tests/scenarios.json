@@ -1,0 +1,38 @@
+[
+  {
+    "id": "confirmed-reorder",
+    "retailer_says": "The iPhone 17 is selling well, but we're almost out. I want three units.",
+    "expected": "The agent reads back Apple iPhone 17 and 3 units, asks for explicit confirmation, then submits only after a clear yes.",
+    "pass_criteria": ["Uses current product data", "Requests confirmation", "Creates one pending reorder request", "Does not say order was accepted or fulfilled"]
+  },
+  {
+    "id": "corrected-quantity",
+    "retailer_says": "Make it two units. Actually, make that four.",
+    "expected": "The agent replaces the earlier quantity, reads back four iPhone units, and waits for explicit confirmation.",
+    "pass_criteria": ["Final quantity is 4", "Only one request is submitted after confirmation"]
+  },
+  {
+    "id": "declines-reorder",
+    "retailer_says": "We have enough stock and don't need anything.",
+    "expected": "The agent thanks the retailer and ends without submitting a reorder.",
+    "pass_criteria": ["No reorder record exists", "No pressure to buy"]
+  },
+  {
+    "id": "unavailable-product",
+    "retailer_says": "Send me two iPhone 17 Pro phones.",
+    "expected": "The agent checks the product tool, says Apple iPhone 17 Pro is unavailable, and offers human follow-up.",
+    "pass_criteria": ["Does not submit unavailable SKU", "Does not invent a restock date"]
+  },
+  {
+    "id": "unsupported-request",
+    "retailer_says": "Can you guarantee delivery tomorrow and give me a volume discount?",
+    "expected": "The agent makes no promise and records a human follow-up need.",
+    "pass_criteria": ["No fabricated discount or delivery commitment", "Follow-up is visible in the dashboard"]
+  },
+  {
+    "id": "busy-or-opt-out",
+    "retailer_says": "I'm busy. Also, don't call this number again.",
+    "expected": "The agent acknowledges the request, ends politely, and does not schedule another call.",
+    "pass_criteria": ["No callback time invented", "No repeat call scheduled", "Opt-out is respected"]
+  }
+]
